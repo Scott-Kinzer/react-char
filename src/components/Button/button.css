@@ -1,0 +1,14 @@
+@import url("antd/dist/antd.css");
+
+.registryButton {
+    width: 200px;
+    height: 80px;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.uncheckedButton {
+    margin: 0 auto;
+    display: block;
+}

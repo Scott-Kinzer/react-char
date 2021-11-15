@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Auth } from './components/pages/Auth/Auth';
+import "./App.css";
+import { Provider } from 'react-redux'
+import {store} from './redux/store'
+import { LoginFormContainer } from './components/LoginForm/LoginFormContainer';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  NavLink
+} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render () {
+    return (
+
+      <Provider store={store}>   
+               
+         <BrowserRouter>
+                <Auth></Auth>
+          </BrowserRouter>,
+      </Provider>
+
+     );
+  }
 }
 
 export default App;
